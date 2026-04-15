@@ -173,7 +173,6 @@ class Factura:
         self.calcular_total()
         print(f"\n  ═══════════════ FACTURA ═══════════════")
         print(f"  Paciente   : {self.consulta.mascota.nombre}")
-        print(f"  Propietario: {self.consulta.veterinario.nombre}")
         print(f"  Subtotal   : ${self.subtotal:,.0f}")
         print(f"  IVA (19%)  : ${self.impuesto:,.0f}")
         print(f"  TOTAL      : ${self.total:,.0f}")
