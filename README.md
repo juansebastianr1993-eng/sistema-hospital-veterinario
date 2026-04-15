@@ -24,13 +24,6 @@ Permite gestionar:
 | Composición  | `Consulta` crea `Tratamiento`                         |
 
 ---
-## Diagrama UML
-
-El siguiente diagrama representa la estructura del sistema, incluyendo clases, atributos, métodos y relaciones:
-
-![Diagrama UML](uml_model.png.mdj)
-
----
 ## Relación entre el UML y el código
 
 ###  Abstracción
