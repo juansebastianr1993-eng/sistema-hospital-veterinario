@@ -124,15 +124,6 @@ Permite utilizar diferentes métodos de pago sin cambiar la lógica.
 7. Se genera una factura
 8. Se paga con distintos métodos
 
----
-## Ejecución del sistema
-
-Para ejecutar el programa:
-
-```bash
-python main.py
-```
-
 El sistema incluye una simulación completa donde se prueba:
 
 * Registro de cliente
