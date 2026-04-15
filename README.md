@@ -14,14 +14,15 @@ Permite gestionar:
 ---
 ## Conceptos de POO aplicados
 
-| Concepto     | Implementación en el sistema                          |
-| ------------ | ----------------------------------------------------- |
-| Abstracción  | Clases `Persona` y `MetodoPago`                       |
-| Herencia     | `Veterinario`, `Cliente`, `Recepcionista` ← `Persona` |
-| Polimorfismo | Uso de `MetodoPago` en `Factura`                      |
-| Asociación   | `Consulta` conecta `Mascota` y `Veterinario`          |
-| Agregación   | `Cliente` contiene `Mascota`                          |
-| Composición  | `Consulta` crea `Tratamiento`                         |
+| Concepto     | Implementación en el sistema                                            |
+| ------------ | ----------------------------------------------------------------------- |
+| Abstracción  | Clases `Persona` y `MetodoPago`                                         |
+| Herencia 1   | `Veterinario`, `Cliente`, `Recepcionista` ← `Persona`                   |
+| Herencia 2   | pagoEfectivo, ´pago_tarjeta´, ´pago_transferencia´ ← `MetodoPago`     |
+| Polimorfismo | Uso de `MetodoPago` en `Factura`                                        |
+| Asociación   | `Consulta` conecta `Mascota` y `Veterinario`                            |
+| Agregación   | `Cliente` contiene `Mascota`                                            |
+| Composición  | `Consulta` crea `Tratamiento`                                           |
 
 ---
 ## Relación entre el UML y el código
