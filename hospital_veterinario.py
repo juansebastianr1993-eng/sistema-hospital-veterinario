@@ -188,12 +188,12 @@ if __name__ == "__main__":
 
     print("   HOSPITAL VETERINARIO — PRUEBA DEL SISTEMA")
 
-    # ── 1. Crear un cliente 
+    # 1. Crear un cliente 
     print("\n[1] Creando cliente...")
     cliente = Cliente("María García", "CC-12345678", "310-555-0001")
     print(f"  {cliente.mostrar_rol()}")
 
-    # ── 2. Registrar dos mascotas 
+    # 2. Registrar dos mascotas 
     print("\n[2] Registrando mascotas...")
     mascota1 = Mascota("Luna", "Perro", 3, 8.5)
     mascota2 = Mascota("Michi", "Gato", 5, 4.2)
@@ -203,7 +203,7 @@ if __name__ == "__main__":
     cliente.agregar_mascota(mascota2)
     cliente.mostrar_mascotas()
 
-    # ── 3. Crear un veterinario 
+    # 3. Crear un veterinario 
     print("\n[3] Creando veterinario...")
     vet = Veterinario("Carlos Pérez", "CC-98765432", "Medicina Interna")
     print(f"  {vet.mostrar_rol()}")
@@ -212,34 +212,34 @@ if __name__ == "__main__":
     recep = Recepcionista("Ana Torres", "CC-11223344")
     print(f"  {recep.mostrar_rol()}")
 
-    # ── 4. Veterinario atiende una mascota 
+    # 4. Veterinario atiende una mascota 
     print("\n[4] Atendiendo mascota...")
     vet.atender_mascota(mascota1)
 
-    # ── 5. Crear una consulta 
+    # 5. Crear una consulta 
     print("\n[5] Creando consulta...")
     # ASOCIACIÓN: Consulta conecta a veterinario y mascota
     consulta = Consulta(mascota1, vet, "Vómitos y decaimiento general")
     consulta.diagnostico = "Gastroenteritis aguda"
     print(f"  Consulta creada para: {mascota1.nombre}")
 
-    # ── 6. Crear dos tratamientos dentro de la consulta 
+    # 6. Crear dos tratamientos dentro de la consulta 
     print("\n[6] Añadiendo tratamientos (COMPOSICIÓN)...")
     # COMPOSICIÓN: los tratamientos nacen dentro de la consulta
     consulta.crear_tratamiento("Antibiótico oral 7 días", 85_000, 7)
     consulta.crear_tratamiento("Suero IV + hospitalización", 220_000, 2)
 
-    # ── 7. Mostrar resumen y calcular costo total 
+    # 7. Mostrar resumen y calcular costo total 
     print("\n[7] Resumen de la consulta:")
     consulta.mostrar_resumen()
 
-    # ── 8. Pagar con efectivo 
+    # 8. Pagar con efectivo 
     print("\n[8] Pagando con EFECTIVO (primer método)...")
     factura = Factura(consulta)
     pago_efectivo = PagoEfectivo()
     factura.pagar(pago_efectivo)
 
-    # ── 9. Nueva consulta, cambiar método de pago 
+    # 9. Nueva consulta, cambiar método de pago 
     print("\n[9] Nueva consulta — pagando con TARJETA...")
     consulta2 = Consulta(mascota2, vet, "Control de peso y vacunas")
     consulta2.diagnostico = "Estado general bueno"
@@ -258,3 +258,7 @@ if __name__ == "__main__":
     factura3 = Factura(consulta3)
     pago_transferencia = PagoTransferencia("Bancolombia")
     factura3.pagar(pago_transferencia)
+
+print("_______________________________________________________________________")
+print(" Elaborado por: JUAN SEBASTIAN RESTREPO DIAZ Y JONH ALEXANDER PRIETO LEIVA")
+print()
