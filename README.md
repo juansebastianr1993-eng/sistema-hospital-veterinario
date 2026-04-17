@@ -1,117 +1,19 @@
-# 🐾 Sistema de Gestión - Hospital Veterinario
+## 🐾 Sistema de Gestión Veterinaria
 
-Este proyecto implementa un sistema orientado a objetos en Python que modela el funcionamiento básico de un hospital veterinario.
+Este proyecto modela un flujo completo dentro de una clínica veterinaria, desde el registro de clientes y mascotas hasta la generación de consultas médicas, tratamientos y facturación con múltiples métodos de pago utilizando POO en python. 
 
-Permite gestionar:
+Se aplican conceptos clave como:
 
-* Clientes
-* Mascotas
-* Consultas
-* Tratamientos
-* Facturación
-* Métodos de pago
-
----
-## Conceptos de POO aplicados
-
-| Concepto     | Implementación en el sistema                                            |
-| ------------ | ----------------------------------------------------------------------- |
-| Abstracción  | Clases `Persona` y `MetodoPago`                                         |
-| Herencia 1   | `Veterinario`, `Cliente`, `Recepcionista` ← `Persona`                   |
-| Herencia 2   | pagoEfectivo, ´pago_tarjeta´, ´pago_transferencia´ ← `MetodoPago`     |
-| Polimorfismo | Uso de `MetodoPago` en `Factura`                                        |
-| Asociación   | `Consulta` conecta `Mascota` y `Veterinario`                            |
-| Agregación   | `Cliente` contiene `Mascota`                                            |
-| Composición  | `Consulta` crea `Tratamiento`                                           |
-
----
-## Relación entre el UML y el código
-
-###  Abstracción
-
-En el UML se representan las clases abstractas `Persona` y `MetodoPago`.
-
-En el código:
-
-```python
-class Persona(ABC):
-    @abstractmethod
-    def mostrar_rol(self):
-        pass
-```
-
----
-### Herencia
-
-En el UML se observa que varias clases heredan de una clase base.
-
-En el código:
-
-```python
-class Veterinario(Persona):
-```
-
-También:
-
-* Cliente → Persona
-* Recepcionista → Persona
-* PagoEfectivo → MetodoPago
-* PagoTarjeta → MetodoPago
-* PagoTransferencia → MetodoPago
-
----
-### Agregación (Cliente ◇ Mascota)
-
-En el UML se representa con un rombo blanco.
-
-En el código:
-
-```python
-self.mascotas = []
-```
-
-Un cliente puede tener múltiples mascotas, pero estas existen independientemente del cliente.
-
----
-### Asociación (Consulta ↔ Mascota / Veterinario)
-
-En el UML se representa con líneas simples.
-
-En el código:
-
-```python
-class Consulta:
-    def __init__(self, mascota, veterinario, motivo):
-```
-
-La clase Consulta conecta al veterinario con la mascota.
-
----
-### Composición (Consulta ◆ Tratamiento)
-
-En el UML se representa con un rombo negro.
-
-En el código:
-
-```python
-def crear_tratamiento(self, nombre, costo, duracion_dias):
-    t = Tratamiento(nombre, costo, duracion_dias)
-```
-
-Los tratamientos se crean dentro de la consulta y dependen de ella.
-
----
-### Polimorfismo (Métodos de pago)
-
-En el UML se observa que Factura depende de MetodoPago.
-
-En el código:
-
-```python
-def pagar(self, metodo_pago: MetodoPago):
-```
-
-Permite utilizar diferentes métodos de pago sin cambiar la lógica.
+--- 
+| Concepto        | Uso en el sistema                                    |
+| --------------- | ---------------------------------------------------- |
+| Herencia        | Reutilización de atributos en `Persona`              |
+| Abstracción     | Clases abstractas como `Persona` y `MetodoPago`      |
+| Encapsulamiento | Organización interna de la lógica                    |
+| Polimorfismo    | Diferentes métodos de pago                           |
+| Composición     | `Consulta` contiene `Tratamientos`                   |
+| Agregación      | `Cliente` tiene múltiples `Mascotas`                 |
+| Asociación      | Relación entre `Consulta`, `Mascota` y `Veterinario` |
 
 ---
 ## Flujo del sistema
@@ -138,7 +40,12 @@ El sistema incluye una simulación completa donde se prueba:
   * Tarjeta
   * Transferencia
 
+## Autores: 
 
+Proyecto elaborado por:
+
+- Juan Sebastián Restrepo Díaz
+- John Alexander Prieto Leiva
 
 
 
