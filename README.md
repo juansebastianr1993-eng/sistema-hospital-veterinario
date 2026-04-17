@@ -34,8 +34,8 @@ El sistema incluye una simulación completa donde se prueba:
 -  Atención por veterinario
 -  Creación de consulta
 -  Generación de tratamientos
--  Pago con:
 
+##  Pago con:
   * Efectivo
   * Tarjeta
   * Transferencia
