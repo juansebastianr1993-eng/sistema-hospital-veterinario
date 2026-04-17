@@ -28,12 +28,13 @@ Se aplican conceptos clave como:
 8. Se paga con distintos métodos
 
 El sistema incluye una simulación completa donde se prueba:
-a.  Registro de cliente
-b.  Registro de mascotas
-c.  Atención por veterinario
-d.  Creación de consulta
-e.  Generación de tratamientos
-f.  Pago con:
+
+-  Registro de cliente
+-  Registro de mascotas
+-  Atención por veterinario
+-  Creación de consulta
+-  Generación de tratamientos
+-  Pago con:
 
   * Efectivo
   * Tarjeta
